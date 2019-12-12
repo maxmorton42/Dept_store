@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link, } from "react-router-dom";
 import { Button, Card, Header, Icon } from "semantic-ui-react";
+import styled from 'styled-components';
 
 class Departments extends React.Component {
   state = { departments: [], }
@@ -49,7 +50,7 @@ class Departments extends React.Component {
 render() {
   return (
   <div>
-  <Header as="h1">Departments</Header>
+  <HeaderText as="h1">Departments</HeaderText>
     <br />
     <Button as={Link} color="green" to="/departments/new">
      Add Department
@@ -64,6 +65,10 @@ render() {
   )
 }
 }
+
+const HeaderText = styled.h1`
+text-align: center;
+`;
 
 export default Departments;
 

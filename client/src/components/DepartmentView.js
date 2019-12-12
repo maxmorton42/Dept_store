@@ -3,6 +3,7 @@ import axios from "axios";
 import Items from "./Items"
 import { Link, } from "react-router-dom";
 import { Button, Header, Segment,} from "semantic-ui-react";
+import styled from 'styled-components';
 
 class DepartmentView extends React.Component {
   state = { department: {}, items: [], }
@@ -21,7 +22,7 @@ class DepartmentView extends React.Component {
     return (
       <div>
         <Segment>
-      <Header as="h1">{ this.state.department.name }</Header>
+      <HeaderText as="h1">{ this.state.department.name }</HeaderText>
       </Segment>
       <br />
       <br />
@@ -48,6 +49,11 @@ class DepartmentView extends React.Component {
     )
   }
 }
+
+const HeaderText = styled.h1`
+text-align: center;
+color: green;
+`;
  
 export default DepartmentView;
 
